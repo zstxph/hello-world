@@ -1,0 +1,32 @@
+#newMenuItem{
+    background: lightblue;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    
+    
+    gap: 10px;
+    gap: 10px 20px;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.topnav a{
+    
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px; 
+ }
+
+ .topnav a:hover {
+     background-color: darkcyan;
+     color:black;
+ }
+
+h1 {
+    text-align: center;
+}
