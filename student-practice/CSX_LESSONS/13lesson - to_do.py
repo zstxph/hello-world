@@ -12,10 +12,12 @@ toppings = [
   ["bacon", "cheese", "avocado"]
 ]
 
-for sublist in toppings:
-    print(f"current sublist toppings: {sublist}")
-    for more_toppings in sublist:
-        print(f"more toppings: {more_toppings}")
+
+for first_list in toppings:
+    print(f"toppings in current list: {first_list}")
+    for second_list in first_list:
+        print(f"current toppings:{second_list}")
+
 
 ####################################################################################################
 
@@ -46,10 +48,25 @@ movie_series = {
 
 # HINT: Use a nested "for loop" to iterate through "movie_series".
 
-print(movie_series["The Hunger Games"])
+# need to create new variables for franchise and movie in order to complete for loop
+# need if statement before print()
+# in order to complete, need to loop through nested data to second movie from all 3 franchises
+
+
+# key? movie_series["The hunger Games"]["second"]
+
+
 franchise = movie_series["The Hunger Games"]
-movie = (franchise["second"])
-print(f"The second movie in the {franchise} franchise is {movie}")
+second_movie = franchise["second"]
+#print(franchise)
+#print(second_movie)
+
+for movie_franchise in movie_series:
+  franchise = movie_series["The Hunger Games"]
+
+  for second_mov in franchise:
+    second_movie = franchise["second"]
+    print(f"The second movie in {franchise} franchise is {second_movie}.")
 
 ####################################################################################################
 
@@ -114,10 +131,13 @@ def transactify(transactions):
 
 transactify(transactions_data) 
 
+#--
 
 for key in transactions_data:
     amount = key["amount"]
     place = key["place"]
     account = key["acct"]
-    for transactions in transactions_data:
-      print(f"You spend $ {amount} at {place} with your {account}. if the dollar amount was over $100.")
+    if amount >= 100:
+        for transactions in transactions_data:
+            print(f"You spent ${amount} at {place} with your {account}.")
+

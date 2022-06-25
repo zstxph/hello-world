@@ -12,19 +12,22 @@ Advanced conditional statements with continue and break statements.
 # "num" as the argument to call "evaluate()".
 
 
-from pickletools import string1
+from logging import StringTemplateStyle
+import string
 
 
-num = int(input("input an integer here: "))
+num = int(input(f"Enter an integer: "))
 
-def evaluate(user_input):
-    if user_input % 2 == 0:
-        print(f"The user input is even.")
-    else:
-        print(f"The user input is odd.")  
+def evaulate(user_int):
+    if user_int % 2 == 0:
+        print(f"{num} is even.")
+    else: 
+        print(f"{num} is odd.")
 
 
-evaluate(num)
+evaulate(num)
+
+
 
 
 ####################################################################################################
@@ -47,15 +50,22 @@ stringy2 = "supercalifragilisticexpialidocious"
 stringy3 = ""
 
 
-def charLength(string):
-    string_len = len(string)
-    if string < 10:
-        print("The string {string} has more than 10 characters.")
-    elif string < 5:
-        print("The string {string} has more than 5 characters.")
-    else:
-        print("The string {string} only has {string_len} characters.")
 
+def charLength(strings): 
+    string_len = len(strings)
+    if string_len < 10:
+        print(f'The string {strings} has more than 10 characters.')
+    elif string_len > 5:
+        print(f'The string {strings} has more than 5 characters.')
+    else:
+        print(f'The string {strings} only has {string_len} characters')
+
+
+print(charLength(stringy1))
+
+print(charLength(stringy2))
+
+print(charLength(stringy3))
 
 
 ####################################################################################################
@@ -69,6 +79,15 @@ def charLength(string):
 
 i = 0
 
+while i < 30:
+    i += 3
+    if i % 2 == 0:
+        print(f'Skipping number {i}.')
+        continue
+    print(f"Current variable value: {i}")
+
+
+    
 ####################################################################################################
 
 # TODO: Section 4
@@ -79,3 +98,11 @@ i = 0
 # loop from running. 
 
 i = 1
+
+while i < 200:
+    i += 4
+    if i > 42:
+        print("Breaking the loop now.")
+        break
+    print(f"{i} is less than 200.")
+

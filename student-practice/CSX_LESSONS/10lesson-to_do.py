@@ -10,27 +10,13 @@ Expanding on loops
 # TIP: Remember modulo from the Basic Math lesson?
 # TIP: Consider how that can help us identify odd/even numbers.
 
-user_int = int(input("enter an integer: "))
+
+
+user_int = int(input(f'Enter an integer: '))
 if user_int % 2 == 0:
     print(f"{user_int} is even.")
 else:
     print(f"{user_int} is odd.")
-
-
-# note to self:
-# #  A great way to use the modulo in context is to use it to test
-#  whether for odd or even numbers. If a number can be divisible 
-#  by 2 without a remainder, then by definition the number is even.
-#  If the number is divided by 2 that equation yields a remainder, 
-#  then the number must be odd. To put this concept into Python terms:  if (num % 2 == 0): --insert code to execute here
-                                        #                               else: #num is odd --insert code to execute here
-#  The code above basically states that if a the remainder of a number 
-#  divided by 2 is equal to zero, the number is even. If not, the number 
-#  is odd. This snippet can be used to execute a number of different 
-#  functions based on whether or not the number in question is even or 
-#  odd -- insert your functions where it says "insert code here" to add 
-#  some functionality to the snippet.
-
 
 ####################################################################################################
 
@@ -42,10 +28,12 @@ else:
 todos = ["exercise for fun", "eat food", "go to school", "write some code"]
 finished_todos = []
 
+
 while todos:
     finished_todos = todos.pop()
-    print(f"you finished task: '{finished_todos}' and it was removed from your todo list.")
-    print(f"your remaining items are: {todos}")
+    print(f'you finished a task from: {finished_todos}')
+    print(f'remaning tasks left in todo are: {todos}')
+    print('\n')
 
 ####################################################################################################
 
@@ -57,9 +45,10 @@ while todos:
 
 var = 7
 
-while var <=21:
-    var +=2
+while var <= 21:
     print(var)
+    var += 2
+
 
 ####################################################################################################
 
@@ -73,8 +62,9 @@ while var <=21:
 # Important:
 # For the purpose of this exercise please input only POSITIVE integers.
 
-user_int = int(input("enter an integer: "))
+
+user_int = int(input(f'Enter a number: '))
 if user_int % 2 == 0:
-    print(f"the number you inputed is incremented by 1 and is now {user_int + 1 }.")
+    print(f'the number you inputted is even and increasead by 1 and is now {user_int + 1}.')
 else:
-    print(f"the number you inputed is incremented by 3 and is now {user_int + 3}.")
+    print(f'the number you inpputed is odd and is decreaded by 3 and is now {user_int - 3}.')
