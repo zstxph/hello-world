@@ -22,10 +22,14 @@ Use employees.txt to perform operations on a list of employees
 # Use the "open" function to read the contents of "employees.txt" and print them to the terminal
 # using the ".read()" method. Then close the file.
 
-employees = open("lesson15_employees.txt", "r")
+
+############ RUN FILE PATH: C:\Users\zstep\programming\python-work\student-practice\CSX_LESSONS\15lesson -
+
+
+employees = open("employees.txt" , "r")
+
 contents = employees.read()
 print(f"Contents .read() method:\n{contents}\n")
-
 
 employees.close()
 
@@ -34,7 +38,7 @@ employees.close()
 # Reopen "employees.txt". Then read each line in the file seperately using the ".readlines()" method
 # and print them out to the terminal. Lastly close the file.
 
-employees = open("lesson15_employees.txt", "r")
+employees = open("employees.txt", "r")
 first_line = employees.readline()
 second_line = employees.readline()
 third_line = employees.readline()
@@ -42,7 +46,6 @@ fourth_line = employees.readline()
 fifth_line = employees.readline()
 print(f"Contents .readline() method:\nFirst Line - {first_line}\nSecond Line - {second_line}\nThird Line- {third_line}\nFourth Line - {fourth_line}\nFifth Line - {fifth_line}")
 employees.close()
-
 
 ####################################################################################################
 
@@ -55,10 +58,11 @@ employees.close()
 
 # HINT: Use "\t" in strings to create a tab.
 
-employees = open("lesson15_employees.txt", "w")
+
+employees = open("employees.txt", "w")
 employees.write("John\tSmith\tPublic Relations\t50000")
 
-employees.open("lesson15_employees.txt", "r")
+employees = open("employees.txt", "r")
 contents = employees.read()
 print(f"contents .read() method:\n{contents}\n")
 
