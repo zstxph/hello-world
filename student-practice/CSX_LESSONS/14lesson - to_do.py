@@ -50,27 +50,22 @@ def isPrime(num):
 
 def isEven(num):
   if num % 2 == 0:
-    print(f"{num} is even.")
+    return(f"is {num} is even")
   else:
-    print(f"{num} is odd.")
+    return(f"is {num} is odd")
  
-  return isEven
 
-is_prime = isPrime
-is_even = isEven
+
 
 def main(listy):
   for num in listy:
-    if is_prime:
-      print(f"The number {num} is odd and prime.")
-    elif is_prime:
-      print(f"The number {num} is odd and not prime.")
-    elif is_even:
-      print(f"The number {num} is even and prime.")
-    else: 
-      print(f"The number {num} is even and not prime.")
+    if isPrime(num):
+      print(f"The number {isEven(num)} and prime.")
+    else:
+      print(f"The number {isEven(num)} and not prime.")
+  
   
 main(num_list)
 
 
-#output is printing even numbers with statement that it's odd
+# need to loop the main into the isEven 

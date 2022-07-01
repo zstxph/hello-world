@@ -5,6 +5,7 @@ Todo for 16_advanced_lists_and_dicts
 # TODO: Section 2
 
 import enum
+from tabnanny import check
 
 
 stringy = "supercalifragilisticexpialidocious"
@@ -50,11 +51,11 @@ check_cities1 = ["New York", "Boston", "Toronto"]
 # TIP: Loop through "check_cities1" to more easily test your condition.
 
 
-city = "Boston"
-if city in check_cities1:
-    print(f"The city {city} exists in the dictionary.")
-else:
-    print(f"The city {city} does not exist in the dictionary.")
+for c in check_cities1:
+    if c in cities:
+        print(f"the city {c} exists in the dictionary.")
+    else:
+        print(F"the city {c} does not exist in the dictionary.")
 
 
 
@@ -66,6 +67,6 @@ check_cities2 = ["Rome", "Paris"]
 # statement: "This city does not exist in the dictionary."
 
 
-city = check_cities2
-if city not in check_cities2:
-    print(f"The city {city} does not exist in the dictionary.")
+for c in check_cities2:
+    if c not in cities:
+        print(f"The city {c} does not exist in the dictionary.")
